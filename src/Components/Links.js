@@ -38,7 +38,7 @@ function Links({ links }) {
           .filter((link) => Object.keys(colors).includes(link.icon))
           .map((link, index) => (
             <Button
-              className={`p-p-3 p-m-2 p-button-outlined ${link.icon}`}
+              className={`p-p-3 p-m-2 p-button-outlined p-button-rounded ${link.icon}`}
               style={{ color: colors[link.icon] }}
               key={`link.url_${index}`}
               onClick={() => goToLinkHandle(link.url)}
@@ -52,7 +52,7 @@ function Links({ links }) {
           .filter((link) => !Object.keys(colors).includes(link.icon))
           .map((link, index) => (
             <Button
-              className="p-p-3 p-m-2 p-button-outlined unknown"
+              className="p-p-3 p-m-2 p-button-outlined p-button-rounded unknown"
               key={`link.url_${index}`}
               onClick={() => goToLinkHandle(link.url)}
               role="link"
